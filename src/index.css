@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-bgprimary bg-bgSecondary text-textprimary text-textSecondary antialiased;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.stack::-webkit-scrollbar,
+.work-experience::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Edge */
+}
