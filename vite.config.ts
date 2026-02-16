@@ -10,5 +10,5 @@ export default defineConfig({
       },
     }),
   ],
-  base: "/digital-resume/",
+  base: "/digital-canvas/",
 });

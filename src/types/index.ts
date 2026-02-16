@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 export type formField = Record<"name" | "value", string>;
 export type experience = {
   company: string;
@@ -16,3 +18,24 @@ export type bio = {
   title: string;
   description: string;
 };
+
+export type theme = "light" | "dark";
+
+export interface ThemeClassSet {
+  bgPrimaryAccent: string;
+  bgSecondaryAccent: string;
+  bgPrimary: string;
+  bgSecondary: string;
+  bgTertiary: string;
+  textPrimary: string;
+  textSecondary: string;
+  borderSecondary: string;
+  headerGradient: string;
+}
+
+export interface hero {
+  title: string | TrustedHTML;
+  punchLine: string | ReactNode;
+  shortDescription: string | ReactNode;
+  longDescription: string | TrustedHTML;
+}

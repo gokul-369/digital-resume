@@ -1,4 +1,10 @@
-import type { experience, formField, skill, bio as BioType } from "../types";
+import type {
+  experience,
+  formField,
+  skill,
+  bio as BioType,
+  hero as heroType,
+} from "../types";
 
 import javascriptLogo from "../assets/javascript.svg";
 import typescriptLogo from "../assets/typescript.svg";
@@ -18,11 +24,40 @@ import dockerLogo from "../assets/docker.svg";
 import googleCloudLogo from "../assets/googlecloud.svg";
 import vercelLogo from "../assets/vercel.svg";
 
+export const navLinks: formField[] = [
+  {
+    name: "Home",
+    value: "#home",
+  },
+  {
+    name: "About",
+    value: "#about",
+  },
+  {
+    name: "Experience",
+    value: "#experience",
+  },
+  {
+    name: "Skills",
+    value: "#skills",
+  },
+];
+
+export const hero: heroType = {
+  title: `Welcome to <span class="text-indigo-500">Gokul&apos;s </span> digital canvas`,
+  punchLine: "Interfaces that breathe.",
+  shortDescription:
+    "A software engineer who is solving for scale. Building for users. Refining for impact.",
+  longDescription: ` Hi, I&apos;m <span class="text-white dark:text-black">Gokul</span>, a software
+                          engineer with a passion for crafting seamless user interfaces that
+                          blend form and function. I&apos;m keen on building products that
+                          not only meet user needs but also delight them.`,
+};
 export const bio: BioType = {
   name: "Gokul",
   title: "Software Engineer",
   description:
-    "A Chennai based software engineer with an eye for elegant solutions and a passion for crafting seamless UIs that blend form and function, keen on building products that not only meet user needs but also delight them, and comes with good movie recommendations.",
+    "I’m a software engineer from Chennai who lives in the space between engineering and design. I enjoy building frontends that are predictable for developers, forgiving for users, and fast in production. I’m the person who will refactor a component tree, tweak easing on a micro‑interaction, and still care about how it behaves under real traffic.",
 };
 
 export const fields: formField[] = [

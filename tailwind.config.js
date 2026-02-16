@@ -8,6 +8,8 @@ module.exports = {
     extend: {
       colors: {
         // light mode colors
+        bgPrimaryAccent: colors.indigo[500],
+        bgSecondaryAccent: colors.indigo[400],
         bgprimary: colors.neutral[950],
         bgSecondary: colors.neutral[900],
         bgTertiary: colors.neutral[800],
@@ -15,7 +17,10 @@ module.exports = {
         textSecondary: colors.gray[400],
 
         //dark mode colors
-        darkBgPrimary: colors.neutral[100],
+        darkBgPrimary: "#ffffff",
+        darkBgPrimaryAccent: colors.indigo[500],
+        darkBgSecondaryAccent: colors.indigo[400],
+        darkBackgroundSecondary: colors.neutral[900],
         darkBgSecondary: colors.neutral[200],
         darkBgTertiary: colors.neutral[300],
         darkTextPrimary: colors.black,
