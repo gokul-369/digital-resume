@@ -13,6 +13,9 @@ export const themeFactory = (theme: "light" | "dark"): ThemeClassSet => {
       borderSecondary: "border-textSecondary",
       headerGradient:
         "bg-gradient-to-r from-sky-300 via-indigo-400 to-amber-500",
+      textMainAccent1: "text-textMainAccent1",
+      textMainAccent2: "text-textMainAccent2",
+      textMainAccent3: "text-textMainAccent3",
     },
     dark: {
       bgPrimaryAccent: "bg-darkBgPrimaryAccent",
@@ -25,6 +28,9 @@ export const themeFactory = (theme: "light" | "dark"): ThemeClassSet => {
       borderSecondary: "border-darkTextSecondary",
       headerGradient:
         "bg-gradient-to-r from-sky-400 via-indigo-500 to-amber-500",
+      textMainAccent1: "text-textMainAccent1",
+      textMainAccent2: "text-textMainAccent2",
+      textMainAccent3: "text-textMainAccent3",
     },
   };
   return themeFactory[theme];

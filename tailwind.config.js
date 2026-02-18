@@ -15,6 +15,9 @@ module.exports = {
         bgTertiary: colors.neutral[800],
         textprimary: colors.white,
         textSecondary: colors.gray[400],
+        textMainAccent1: colors.indigo[500],
+        textMainAccent2: colors.blue[500],
+        textMainAccent3: colors.amber[500],
 
         //dark mode colors
         darkBgPrimary: "#ffffff",
@@ -25,6 +28,9 @@ module.exports = {
         darkBgTertiary: colors.neutral[300],
         darkTextPrimary: colors.black,
         darkTextSecondary: colors.gray[600],
+        textMainAccent1: colors.indigo[500],
+        textMainAccent2: colors.blue[500],
+        textMainAccent3: colors.amber[500],
       },
     },
     fontFamily: {

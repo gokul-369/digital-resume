@@ -29,6 +29,9 @@ export interface ThemeClassSet {
   bgTertiary: string;
   textPrimary: string;
   textSecondary: string;
+  textMainAccent1: string;
+  textMainAccent2: string;
+  textMainAccent3: string;
   borderSecondary: string;
   headerGradient: string;
 }

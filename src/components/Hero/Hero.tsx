@@ -22,11 +22,12 @@ function Hero({ theme, colors }: HeroProps) {
 
   return (
     <section id={"home"} className={`h-dvh relative w-full ${theme.bgPrimary}`}>
-      <div className="relative top-0 h-[300%] -z-0">
+      <div className="fixed top-0 h-[100dvh] w-full left-0 right-0 -z-0">
         <LiquidEther
           colors={colors}
+          mouseForce={13}
           isViscous
-          iterationsViscous={50}
+          iterationsViscous={30}
           resolution={0.25}
           autoResumeDelay={1500}
           autoRampDuration={0.3}
@@ -45,10 +46,10 @@ function Hero({ theme, colors }: HeroProps) {
         </Fade>
 
         {/* main hero content */}
-        <main className="content flex flex-col gap-6 px-44">
+        <main className="content flex flex-col gap-6 px-8 lg:px-44">
           <Fade start={ready} variant="fade-down">
             <div
-              className={`text-lg tracking-widest uppercase font-thin text-center ${theme.textPrimary}`}
+              className={`lg:text-lg text-xs tracking-widest uppercase font-thin text-center ${theme.textPrimary}`}
               dangerouslySetInnerHTML={{ __html: hero.title }}
             />
           </Fade>
@@ -59,12 +60,12 @@ function Hero({ theme, colors }: HeroProps) {
             className={"mt-3 text-center"}
           >
             <h3
-              className={`${theme.headerGradient} bg-clip-text text-5xl md:text-6xl font-bold text-transparent`}
+              className={`${theme.headerGradient} bg-clip-text text-3xl lg:text-6xl font-extrabold lg:font-bold text-transparent`}
             >
               {hero.punchLine}
             </h3>
 
-            <h4 className={`mt-4 text-lg ${theme.textSecondary}`}>
+            <h4 className={`mt-4 lg:text-lg text-md ${theme.textSecondary}`}>
               {hero.shortDescription}
             </h4>
           </Fade>

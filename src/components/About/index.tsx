@@ -9,7 +9,10 @@ import { useState } from "react";
 function About({ theme }: { theme: ThemeClassSet }) {
   const [startTyping, setStartTyping] = useState(false);
   return (
-    <section id="about" className={`h-screen py-32 ${theme.bgPrimary}`}>
+    <section
+      id="about"
+      className={`h-screen lg:py-32 px-8 lg:px-40 ${theme.bgPrimary}`}
+    >
       <main className="relative flex flex-col items-center justify-start">
         <p className={`${theme.textPrimary} uppercase tracking-widest`}>
           {" "}
@@ -17,10 +20,10 @@ function About({ theme }: { theme: ThemeClassSet }) {
           <span className={`text-indigo-500`}>know me </span>
         </p>
         <div
-          className={`grid grid-cols-2 h-full gap-8 justify-center items-center mt-10`}
+          className={`grid grid-cols-2 lg:grid-cols-3 h-full lg:gap-96 justify-between items-center mt-10 gap-8`}
         >
           <ProfileCard
-            className="h-full mx-auto text-center w-[350px]"
+            className="h-full mx-auto col-span-2 lg:col-span-1 lg:mx-0 text-center lg:w-[350px] px-5 lg:px-0 w-full"
             name="Gokul"
             title="Software Engineer"
             handle="gokul369"
@@ -38,28 +41,23 @@ function About({ theme }: { theme: ThemeClassSet }) {
             innerGradient="linear-gradient(145deg, rgba(56,189,248,0.15) 0%, rgba(99,102,241,0.22) 40%, rgba(251,191,36,0.18) 100%)"
           />
 
-          <div className={`${theme.textPrimary} max-w-lg text-lg`}>
+          <div
+            className={`${theme.textPrimary} flex flex-col justify-start  col-span-2  lg:text-lg text-md  text-md px-8 lg:px-0`}
+          >
             <BlurText
               delay={200}
-              // text="Hi I am Gokul"
               animateBy="tags"
               direction="top"
               onAnimationComplete={() => setStartTyping(true)}
-              className={`text-4xl font-medium mb-8 ${theme.textPrimary}  tracking-wide`}
+              className={`text-3xl lg:text-5xl font-bold mb-8 ${theme.textPrimary}  tracking-wide`}
             >
-              <h1
-                className={`text-4xl md:text-5xl font-bold ${theme.textPrimary}`}
-              >
-                {"Hi, I am "}
-              </h1>
-              <h1 className="text-4xl ml-3 md:text-5xl font-bold text-indigo-500">
-                Gokul
-              </h1>
+              <h1 className={`${theme.textPrimary}`}>{"Hi, I am "}</h1>
+              <h1 className="ml-3 text-indigo-500">Gokul</h1>
             </BlurText>
             <div className="h-8 mb-8 flex items-center">
               {startTyping && (
                 <h1
-                  className={`${theme.textPrimary} text-2xl font-thin tracking-widest`}
+                  className={`${theme.textPrimary} text-xl lg:text-2xl font-thin tracking-widest`}
                 >
                   I am also{" "}
                   <TextType

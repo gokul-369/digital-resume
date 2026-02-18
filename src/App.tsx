@@ -11,7 +11,7 @@ function App() {
     theme === "light"
       ? ["#9383d2", "#8998e1", "#aba7b9"]
       : // : ["#E5F5FF", "#ffffff", "#", "#FBE8FF", "#D9F7FF"]
-        ["F8F0E5", "#FFFFFF", "#9383d2", "#aba7b9"];
+        ["#F8F0E5", "#FFFFFF", "#9383d2", "#aba7b9"];
   return (
     <>
       <Hero theme={themeClass} colors={colors} />

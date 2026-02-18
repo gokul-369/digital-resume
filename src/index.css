@@ -10,7 +10,8 @@
 }
 
 body {
-  @apply bg-bgprimary bg-bgSecondary text-textprimary text-textSecondary bg-darkBgPrimary bg-darkBgSecondary text-darkTextSecondary text-darkTextPrimary border-darkTextSecondary bg-bgTertiary bg-darkBgTertiary bg-bgPrimaryAccent bg-darkBgPrimaryAccent bg-bgSecondaryAccent bg-darkBgSecondaryAccent;
+  @apply bg-bgprimary bg-bgSecondary text-textprimary text-textSecondary bg-darkBgPrimary bg-darkBgSecondary text-darkTextSecondary text-darkTextPrimary border-darkTextSecondary bg-bgTertiary bg-darkBgTertiary bg-bgPrimaryAccent bg-darkBgPrimaryAccent bg-bgSecondaryAccent bg-darkBgSecondaryAccent
+    text-textMainAccent1 text-textMainAccent2 text-textMainAccent3;
   scrollbar-width: none;
   background: #000;
 }
@@ -60,5 +61,15 @@ body::-webkit-scrollbar,
     );
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
+  }
+}
+
+.animated-links {
+  transition: all 0.5s ease;
+  &:hover {
+    .arrow {
+      transition: all 0.5s ease;
+      margin-left: 0.25rem;
+    }
   }
 }

@@ -1,81 +1,210 @@
+import { CiPen } from "react-icons/ci";
 import type { ThemeClassSet } from "../../types";
 import SpotlightCard from "../SpotLightCard";
+import { MdArrowRightAlt } from "react-icons/md";
+import { RiDoubleQuotesL } from "react-icons/ri";
+import { IoCameraOutline } from "react-icons/io5";
+import { HiOutlineBriefcase, HiOutlineSparkles } from "react-icons/hi";
+import { HiOutlineCommandLine } from "react-icons/hi2";
 
 function Dashboard({ theme }: { theme: ThemeClassSet }) {
+  const cardGenres = {
+    ARTICLE: "article",
+    TESTIMONIALS: "testimonials",
+    PHOTOGRAPHY: "photography",
+    EXPERIENCE: "experience",
+    INSPIRATIONS: "inspirations",
+    WORKS: "works",
+  };
+  const spotlight: Record<keyof typeof cardGenres, string> = {
+    ARTICLE: "rgba(120,100,255,0.45)", //indigo
+    TESTIMONIALS: "rgba(80,160,255,0.45)", //blue
+    PHOTOGRAPHY: "rgba(245, 158, 11, 0.45)", //amber
+    EXPERIENCE: "rgba(56, 189, 248, 0.45)", //sky
+    INSPIRATIONS: "rgba(16, 185, 129, 0.45)", //emerald
+    WORKS: "rgba(34, 211, 238, 0.45)", // cyan",
+  };
   return (
-    <div
-      className={`h-dvh w-full flex px-40 py-8 text-white ${theme.bgPrimary}
-        bg-[radial-gradient(circle_at_bottom,_rgba(129,140,248,0.22)_0%,_transparent_55%),_radial-gradient(circle_at_bottom_right,_rgba(56,189,248,0.18)_0%,_transparent_55%)]
-        `}
+    <section
+      className={`h-full lg:h-dvh w-full flex px-8 lg:px-40 py-8 ${theme.bgPrimary}`}
     >
-      <div className="grid mt-20 justify-center grid-cols-3 gap-4">
-        <SpotlightCard
-          className="p-4 h-full  bg-indigo-500/15 backdrop-blur-sm"
-          spotlightColor="rgba(255, 255, 255, 0.25)"
-        >
-          <h2 className="text-2xl font-bold mb-2">
-            Check out the Latest blog from me
-          </h2>
-          <span className="text-sm">Published on 15th June 2024</span>
-        </SpotlightCard>
-
-        <SpotlightCard
-          className="p-4 h-full bg-blue-500/15 backdrop-blur-sm"
-          spotlightColor="rgba(255, 255, 255, 0.25)"
-        >
-          <h2 className="text-2xl font-bold mb-2">
-            Check out the Latest blog from me
-          </h2>
-          <span className="text-sm">Published on 15th June 2024</span>
-        </SpotlightCard>
-
-        <SpotlightCard
-          className="p-4 h-full bg-violet-500/15 backdrop-blur-sm"
-          spotlightColor="rgba(255, 255, 255, 0.25)"
-        >
-          <h2 className="text-2xl font-bold mb-2">
-            Check out the Latest blog from me
-          </h2>
-          <span className="text-sm">Published on 15th June 2024</span>
-        </SpotlightCard>
-
-        <div className="col-span-2 row-span-2">
+      <div className="grid mt-20 justify-center md:grid-cols-3 grid-cols-2 gap-4">
+        <div className="col-span-2 lg:col-span-1 row-span-2 lg:row-span-1  ">
           <SpotlightCard
-            className="p-4 h-full bg-neutral-800/50"
-            spotlightColor="rgba(255, 255, 255, 0.25)"
+            className="h-full justify-between lg:col-span-1 row-span-2 lg:row-span-1 col-span-2 flex flex-col"
+            spotlightColor={spotlight.ARTICLE}
           >
-            <h2 className="text-2xl font-bold mb-2">
-              Check out the Latest blog from me
+            <h2
+              className="text-lg font-semibold tracking-tight mb-2 text-white/80
+          group-hover:text-indigo-500/90
+          "
+            >
+              Thoughts & Writings
             </h2>
-            <span className="text-sm">Published on 15th June 2024</span>
+            <span className="text-sm text-slate-300">
+              Thoughts shaped by code, curiosity, and continuous learning.
+            </span>
+            <a
+              href={"https://dev.to/gokul369"}
+              className={`text-indigo-500/60 inline-flex text-xs text-left animated-links items-center mt-4 underline link`}
+            >
+              Read my thoughts{" "}
+              <MdArrowRightAlt className="w-7 arrow text-2xl flex items-center font-extralight transition m-0 " />
+            </a>
+            <CiPen
+              className={`h-24 w-24 text-white/5  absolute -right-3 -bottom-3
+              group-hover:text-indigo-500/25 transition
+              `}
+            />
+          </SpotlightCard>
+        </div>
+        <div className="col-span-2 lg:col-span-1 row-span-2 lg:row-span-1  ">
+          <SpotlightCard
+            className="h-full justify-between col-span-2 row-span-2 lg:row-span-1 lg:col-span-1 flex flex-col"
+            spotlightColor={spotlight.TESTIMONIALS}
+          >
+            <h2
+              className="text-lg font-semibold tracking-tight mb-2 text-white/80
+                    group-hover:text-blue-500/90
+          "
+            >
+              Hear what people say about me
+            </h2>
+            <span className="text-sm text-slate-300">
+              Real feedback from people I’ve built, learned, and grown with.
+            </span>
+            <a
+              href={"https://dev.to/gokul369"}
+              className={`text-blue-500/60 inline-flex text-xs text-left animated-links items-center mt-4 underline link`}
+            >
+              Check out testimonials
+              <MdArrowRightAlt className="w-7 arrow text-2xl flex items-center font-extralight transition m-0 " />
+            </a>
+            <RiDoubleQuotesL
+              className={`h-24 w-24 absolute -bottom-3 right-3 text-white/5 group-hover:text-blue-500/25 transition`}
+            />
+          </SpotlightCard>
+        </div>
+        <div className="col-span-2 lg:col-span-1 row-span-2 lg:row-span-1  ">
+          <SpotlightCard
+            className="h-full justify-between flex flex-col"
+            spotlightColor={spotlight.PHOTOGRAPHY}
+          >
+            <h2
+              className="text-lg font-semibold tracking-tight mb-2 text-white/80
+                    group-hover:text-amber-500/90
+          "
+            >
+              World through my lens
+            </h2>
+            <span className="text-sm max-w-64 text-slate-300">
+              Moments, moods, and stories I choose to freeze in time. And yet at
+              some times I just don't click
+            </span>
+            <a
+              href={"https://dev.to/gokul369"}
+              className={`text-amber-500/60 inline-flex text-xs text-left animated-links items-center mt-4 underline link`}
+            >
+              View my photo grid
+              <MdArrowRightAlt className="w-7 arrow text-2xl flex items-center font-extralight transition m-0 " />
+            </a>
+            <IoCameraOutline
+              className={`h-24 w-24 absolute bottom-1 right-3 text-white/5 group-hover:text-amber-500/25 transition`}
+            />
           </SpotlightCard>
         </div>
 
-        <div className="row-span-4">
+        <div className="col-span-2 row-span-2">
           <SpotlightCard
-            className="p-4 h-full bg-neutral-800/50"
-            spotlightColor="rgba(255, 255, 255, 0.25)"
+            className="h-full justify-between  flex flex-col"
+            spotlightColor={spotlight.EXPERIENCE}
           >
-            <h2 className="text-2xl font-bold mb-2">
-              Check out the Latest blog from me
+            <h2
+              className="text-lg font-semibold tracking-tight mb-2 text-white/80
+                    group-hover:text-sky-500/90
+          "
+            >
+              My Journey in tech
             </h2>
-            <span className="text-sm">Published on 15th June 2024</span>
+            <span className="text-sm text-slate-300 max-w-lg">
+              From curiosity to craft and one step, one lesson, one breakthrough
+              at a time. Check out my experience in the world of tech
+            </span>
+            <a
+              href={"https://dev.to/gokul369"}
+              className={`text-sky-500/60 inline-flex text-xs text-left animated-links items-center mt-4 underline link`}
+            >
+              View my work experience
+              <MdArrowRightAlt className="w-7 arrow text-2xl flex items-center font-extralight transition m-0 " />
+            </a>
+            <HiOutlineBriefcase
+              className={`h-24 w-24 absolute bottom-1 right-3 text-white/5 group-hover:text-sky-500/25 transition`}
+            />
+          </SpotlightCard>
+        </div>
+
+        <div className="lg:row-span-4 row-span-2 col-span-2 lg:col-span-1">
+          <SpotlightCard
+            className="h-full justify-between  flex flex-col"
+            spotlightColor={spotlight.WORKS}
+          >
+            <div>
+              <h2
+                className="text-lg font-semibold tracking-tight mb-2 text-white/80
+                    group-hover:text-cyan-500/90
+          "
+              >
+                Tools, Tech & Things I Build
+              </h2>
+              <p className="text-sm  mt-4 text-slate-300">
+                Where ideas meet implementation, and curiosity turns into craft,
+                shaping thoughtful, performant, and human-centered digital
+                experiences, powered by the tools and technologies I love.
+              </p>
+            </div>
+            <a
+              href={"https://dev.to/gokul369"}
+              className={`text-cyan-500/60 inline-flex text-xs text-left animated-links items-center mt-4 underline link`}
+            >
+              View my tech stack
+              <MdArrowRightAlt className="w-7 arrow text-2xl flex items-center font-extralight transition m-0 " />
+            </a>
+            <HiOutlineCommandLine
+              className={`h-24 w-24 absolute bottom-1 right-3 text-white/5 group-hover:text-cyan-500/25 transition`}
+            />
           </SpotlightCard>
         </div>
 
         <div className="col-span-2 row-span-2">
           <SpotlightCard
-            className="p-4 h-full bg-neutral-800/50"
-            spotlightColor="rgba(255, 255, 255, 0.25)"
+            className="h-full justify-between  flex flex-col"
+            spotlightColor={spotlight.INSPIRATIONS}
           >
-            <h2 className="text-2xl font-bold mb-2">
-              Check out the Latest blog from me
+            <h2
+              className="text-lg font-semibold tracking-tight mb-2 text-white/80
+                    group-hover:text-green-500/90
+          "
+            >
+              People I look up to
             </h2>
-            <span className="text-sm">Published on 15th June 2024</span>
+            <span className="text-sm text-slate-300 max-w-lg">
+              The minds and mentalities that forged my discipline, resilience,
+              ambition, and uncompromising standards for growth.
+            </span>
+            <a
+              href={"https://dev.to/gokul369"}
+              className={`text-green-500/60 inline-flex text-xs text-left animated-links items-center mt-4 underline link`}
+            >
+              These are the people I look up to
+              <MdArrowRightAlt className="w-7 arrow text-2xl flex items-center font-extralight transition m-0 " />
+            </a>
+            <HiOutlineSparkles
+              className={`h-24 w-24 absolute bottom-1 right-3 text-white/5 group-hover:text-green-500/25 transition`}
+            />
           </SpotlightCard>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

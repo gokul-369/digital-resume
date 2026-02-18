@@ -57,7 +57,7 @@ export const bio: BioType = {
   name: "Gokul",
   title: "Software Engineer",
   description:
-    "I’m a software engineer from Chennai who lives in the space between engineering and design. I enjoy building frontends that are predictable for developers, forgiving for users, and fast in production. I’m the person who will refactor a component tree, tweak easing on a micro‑interaction, and still care about how it behaves under real traffic.",
+    "A Chennai based engineer, working at the intersection of engineering and design. I build frontends that are predictable for developers, intuitive for users, and fast in production. I care deeply about structure, motion, and performance refactoring component trees, fine-tuning micro-interactions, and obsessing over how systems behave under real-world traffic.",
 };
 
 export const fields: formField[] = [

@@ -19,7 +19,7 @@ function Nav({ theme }: { theme: ThemeClassSet }) {
           <li key={link.name}>
             <a
               href={link.value}
-              className={`text-sm font-thin ${theme.textPrimary}  hover:text-gray-300 transition-colors duration-300`}
+              className={`text-sm font-thin ${theme.textPrimary}  hover:text-indigo-500 transition-colors duration-300`}
             >
               {link.name}
             </a>
