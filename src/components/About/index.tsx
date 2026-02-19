@@ -29,7 +29,7 @@ function About({ theme }: { theme: ThemeClassSet }) {
   };
 
   const chipVariants = {
-    hidden: { opacity: 0, y: 12, scale: 0.96 },
+    hidden: { opacity: 0, y: -12, scale: 0.96 },
     visible: {
       opacity: 1,
       y: 0,

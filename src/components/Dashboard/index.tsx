@@ -1,29 +1,14 @@
 import { CiPen } from "react-icons/ci";
-import type { ThemeClassSet } from "../../types";
+import { spotlight, type ThemeClassSet } from "../../types";
 import SpotlightCard from "../SpotLightCard";
 import { MdArrowRightAlt } from "react-icons/md";
 import { RiDoubleQuotesL } from "react-icons/ri";
 import { IoCameraOutline } from "react-icons/io5";
 import { HiOutlineBriefcase, HiOutlineSparkles } from "react-icons/hi";
 import { HiOutlineCommandLine } from "react-icons/hi2";
+import { HashLink } from "react-router-hash-link";
 
 function Dashboard({ theme }: { theme: ThemeClassSet }) {
-  const cardGenres = {
-    ARTICLE: "article",
-    TESTIMONIALS: "testimonials",
-    PHOTOGRAPHY: "photography",
-    EXPERIENCE: "experience",
-    INSPIRATIONS: "inspirations",
-    WORKS: "works",
-  };
-  const spotlight: Record<keyof typeof cardGenres, string> = {
-    ARTICLE: "rgba(120,100,255,0.45)", //indigo
-    TESTIMONIALS: "rgba(80,160,255,0.45)", //blue
-    PHOTOGRAPHY: "rgba(245, 158, 11, 0.45)", //amber
-    EXPERIENCE: "rgba(56, 189, 248, 0.45)", //sky
-    INSPIRATIONS: "rgba(16, 185, 129, 0.45)", //emerald
-    WORKS: "rgba(34, 211, 238, 0.45)", // cyan",
-  };
   return (
     <section
       className={`h-full lg:h-dvh w-full flex px-8 lg:px-40 py-8 ${theme.bgPrimary}`}
@@ -73,13 +58,14 @@ function Dashboard({ theme }: { theme: ThemeClassSet }) {
             <span className="text-sm text-slate-300">
               Real feedback from people I’ve built, learned, and grown with.
             </span>
-            <a
-              href={"https://dev.to/gokul369"}
+            <HashLink
+              to={"/experience/#testimonials"}
+              smooth
               className={`text-blue-500/60 inline-flex text-xs text-left animated-links items-center mt-4 underline link`}
             >
               Check out testimonials
               <MdArrowRightAlt className="w-7 arrow text-2xl flex items-center font-extralight transition m-0 " />
-            </a>
+            </HashLink>
             <RiDoubleQuotesL
               className={`h-24 w-24 absolute -bottom-3 right-3 text-white/5 group-hover:text-blue-500/25 transition`}
             />

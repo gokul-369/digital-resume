@@ -47,3 +47,33 @@ export interface education {
   title: string;
   subTitle: string;
 }
+
+export interface pageProp {
+  theme: theme;
+}
+
+export const cardGenres = {
+  ARTICLE: "article",
+  TESTIMONIALS: "testimonials",
+  PHOTOGRAPHY: "photography",
+  EXPERIENCE: "experience",
+  INSPIRATIONS: "inspirations",
+  WORKS: "works",
+};
+export const spotlight: Record<keyof typeof cardGenres, string> = {
+  ARTICLE: "rgba(120,100,255,0.45)", //indigo
+  TESTIMONIALS: "rgba(80,160,255,0.45)", //blue
+  PHOTOGRAPHY: "rgba(245, 158, 11, 0.45)", //amber
+  EXPERIENCE: "rgba(56, 189, 248, 0.45)", //sky
+  INSPIRATIONS: "rgba(16, 185, 129, 0.45)", //emerald
+  WORKS: "rgba(34, 211, 238, 0.45)", // cyan",
+};
+
+export interface testimonial {
+  name: string;
+  testimonial: string;
+  jobTitle: string;
+  location: string;
+  company: string;
+  image?: string;
+}

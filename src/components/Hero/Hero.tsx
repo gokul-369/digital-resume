@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
 import type { ThemeClassSet } from "../../types";
-import LiquidEther from "../Background/LiquidEther";
-import Nav from "../Nav";
+import LiquidEther from "../Backgrounds/LiquidEther";
 import { hero } from "../../data";
 import Fade from "../../animations/Fade";
 import Button from "../Button";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
+import BlurText from "../../animations/Text/BlurText";
 
 type HeroProps = {
   theme: ThemeClassSet;
@@ -13,13 +12,6 @@ type HeroProps = {
 };
 
 function Hero({ theme, colors }: HeroProps) {
-  const [ready, setReady] = useState(false);
-  useEffect(() => {
-    // Let the browser paint once, then animate
-    const t = requestAnimationFrame(() => setReady(true));
-    return () => cancelAnimationFrame(t);
-  }, []);
-
   return (
     <section id={"home"} className={`h-dvh relative w-full ${theme.bgPrimary}`}>
       <div className="fixed top-0 h-[100dvh] w-full left-0 right-0 -z-0">
@@ -36,25 +28,21 @@ function Hero({ theme, colors }: HeroProps) {
       </div>
 
       <div className="absolute inset-0 flex items-center justify-center">
-        <Fade
-          className="fixed top-7 z-40"
-          start={ready}
-          variant="fade-down"
-          delay={100}
-        >
-          <Nav theme={theme} />
-        </Fade>
-
         {/* main hero content */}
         <main className="content flex flex-col gap-6 px-8 lg:px-44">
-          <Fade start={ready} variant="fade-down">
+          <BlurText
+            className="text-center"
+            animateBy="tags"
+            delay={200}
+            direction="top"
+          >
             <div
-              className={`lg:text-lg text-xs tracking-widest uppercase font-thin text-center ${theme.textPrimary}`}
+              className={`lg:text-lg text-xs tracking-widest uppercase font-thin ${theme.textPrimary}`}
               dangerouslySetInnerHTML={{ __html: hero.title }}
             />
-          </Fade>
+          </BlurText>
           <Fade
-            start={ready}
+            // start={ready}
             variant="fade-up"
             delay={300}
             className={"mt-3 text-center"}
@@ -70,7 +58,7 @@ function Hero({ theme, colors }: HeroProps) {
             </h4>
           </Fade>
           <Fade
-            start={ready}
+            // start={ready}
             variant="fade-up"
             delay={500}
             mt-5

@@ -1,9 +1,12 @@
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { navLinks } from "../../data";
 import useTheme from "../../hooks/useTheme";
-import type { ThemeClassSet } from "../../types";
+import type { pageProp } from "../../types";
+import { themeFactory } from "../../utils/styleFactory";
+import { HashLink } from "react-router-hash-link";
 
-function Nav({ theme }: { theme: ThemeClassSet }) {
+function Nav({ theme: themeClass }: pageProp) {
+  const theme = themeFactory(themeClass);
   const { toggleTheme, theme: themeName } = useTheme();
 
   return (
@@ -17,12 +20,13 @@ function Nav({ theme }: { theme: ThemeClassSet }) {
       <ul className="flex space-x-4">
         {navLinks.map((link) => (
           <li key={link.name}>
-            <a
-              href={link.value}
+            <HashLink
+              to={link.value}
+              smooth
               className={`text-sm font-thin ${theme.textPrimary}  hover:text-indigo-500 transition-colors duration-300`}
             >
               {link.name}
-            </a>
+            </HashLink>
           </li>
         ))}
       </ul>

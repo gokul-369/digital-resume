@@ -5,6 +5,7 @@ import type {
   bio as BioType,
   hero as heroType,
   education,
+  testimonial,
 } from "../types";
 
 import javascriptLogo from "../assets/javascript.svg";
@@ -24,19 +25,22 @@ import jenkinsLogo from "../assets/jenkins.svg";
 import dockerLogo from "../assets/docker.svg";
 import googleCloudLogo from "../assets/googlecloud.svg";
 import vercelLogo from "../assets/vercel.svg";
+import bharathiImage from "../assets/bharathi.png";
+import lavanyaImage from "../assets/lavanya.png";
+import Akimage from "../assets/Ak.png";
 
 export const navLinks: formField[] = [
   {
     name: "Home",
-    value: "#home",
+    value: "/#home",
   },
   {
     name: "About",
-    value: "#about",
+    value: "/#about",
   },
   {
     name: "Experience",
-    value: "#experience",
+    value: "/experience",
   },
   {
     name: "Skills",
@@ -268,4 +272,58 @@ export const interests: string[] = [
   "Photography",
   "Travel",
   "UI-UX",
+];
+
+export const testimonials: testimonial[] = [
+  {
+    name: "Leelavathi Dahanabal",
+    jobTitle: "Lead Software Engineer",
+    location: "Chennai, India",
+    company: "TCS",
+    testimonial:
+      "It is a great experience working with Gokul, his dedication, postive attitude and commitment to delivering quality work truly stand out, he is very good when it comes to on time deliverables and maintaining good coordination with teams and clients.",
+  },
+  {
+    name: "Bharathi Pachayappan",
+    jobTitle: "Software Engineer",
+    location: "Chennai, India",
+    company: "Infosys",
+    testimonial:
+      "I’ve collaborated with him and exchanged technical ideas, and he consistently stands out for his quick learning ability and strong coding skills. He writes clean and optimized code, grasps new technologies and approaches challenges with clarity and confidence. It’s impressive to see such focus and growth at this stage of his career.",
+    image: bharathiImage,
+  },
+  {
+    name: "Lavanya Srinivasan",
+    jobTitle: "Software Engineer",
+    location: "Ajax, Cannada",
+    company: "Inovyne",
+    testimonial:
+      "I worked with Gokul and what stood out immediately was his genuine passion for coding. He enjoys digging into problems, understanding how things work, and finding clean solutions rather than just getting something to “work.” He’s reliable, easy to collaborate with, and takes real ownership of his work. Any team that values curiosity and solid engineering would benefit from having him.",
+    image: lavanyaImage,
+  },
+  {
+    name: "Nabeel Ahmed",
+    jobTitle: "Lead Engineer",
+    location: "Edinburg, Scotland",
+    company: "Lloyds Bank",
+    testimonial:
+      "I worked with Gokul and what stood out immediately was his genuine passion for coding. He enjoys digging into problems, understanding how things work, and finding clean solutions rather than just getting something to “work.” He’s reliable, easy to collaborate with, and takes real ownership of his work. Any team that values curiosity and solid engineering would benefit from having him.",
+  },
+  {
+    name: "JM Mcghee",
+    jobTitle: "Software Engineer",
+    location: "Edinburg, Scotland",
+    company: "Lloyds Bank",
+    testimonial:
+      "I worked with Gokul and what stood out immediately was his genuine passion for coding. He enjoys digging into problems, understanding how things work, and finding clean solutions rather than just getting something to “work.” He’s reliable, easy to collaborate with, and takes real ownership of his work. Any team that values curiosity and solid engineering would benefit from having him.",
+  },
+  {
+    name: "Ajay Karthick",
+    jobTitle: "Software Engineer",
+    location: "Chennai, India",
+    company: "Agilysis",
+    testimonial:
+      "I worked with Gokul and what stood out immediately was his genuine passion for coding. He enjoys digging into problems, understanding how things work, and finding clean solutions rather than just getting something to “work.” He’s reliable, easy to collaborate with, and takes real ownership of his work. Any team that values curiosity and solid engineering would benefit from having him.",
+    image: Akimage,
+  },
 ];

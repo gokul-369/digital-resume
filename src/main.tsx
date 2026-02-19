@@ -1,10 +1,13 @@
 import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
 import "./index.css";
 import { ThemeProvider } from "./context/ThemeContext.tsx";
+import { BrowserRouter } from "react-router";
+import { AppRoutes } from "./routes/index.tsx";
 
 createRoot(document.getElementById("root")!).render(
-  <ThemeProvider>
-    <App />
-  </ThemeProvider>,
+  <BrowserRouter basename="/digital-canvas/">
+    <ThemeProvider>
+      <AppRoutes />
+    </ThemeProvider>
+  </BrowserRouter>,
 );
