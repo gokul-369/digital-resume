@@ -21,13 +21,13 @@ function Dashboard({ theme }: { theme: ThemeClassSet }) {
             spotlightColor={spotlight.ARTICLE}
           >
             <h2
-              className="text-lg font-semibold tracking-tight mb-2 text-white/80
-          group-hover:text-indigo-500/90
+              className="lg:text-lg text-base font-semibold tracking-tight mb-2 text-white/80
+          group-hover:text-indigo-500/90 
           "
             >
               Thoughts & Writings
             </h2>
-            <span className="text-sm text-slate-300">
+            <span className="lg:text-sm text-xs text-slate-300">
               Thoughts shaped by code, curiosity, and continuous learning.
             </span>
             <a
@@ -50,13 +50,13 @@ function Dashboard({ theme }: { theme: ThemeClassSet }) {
             spotlightColor={spotlight.TESTIMONIALS}
           >
             <h2
-              className="text-lg font-semibold tracking-tight mb-2 text-white/80
+              className="lg:text-lg text-base font-semibold tracking-tight mb-2 text-white/80
                     group-hover:text-blue-500/90
           "
             >
               Hear what people say about me
             </h2>
-            <span className="text-sm text-slate-300">
+            <span className="lg:text-sm text-xs text-slate-300">
               Real feedback from people I’ve built, learned, and grown with.
             </span>
             <HashLink
@@ -78,13 +78,13 @@ function Dashboard({ theme }: { theme: ThemeClassSet }) {
             spotlightColor={spotlight.PHOTOGRAPHY}
           >
             <h2
-              className="text-lg font-semibold tracking-tight mb-2 text-white/80
+              className="lg:text-lg text-base font-semibold tracking-tight mb-2 text-white/80
                     group-hover:text-amber-500/90
           "
             >
               World through my lens
             </h2>
-            <span className="text-sm max-w-64 text-slate-300">
+            <span className="lg:text-sm text-xs max-w-64 text-slate-300">
               Moments, moods, and stories I choose to freeze in time. And yet at
               some times I just don't click
             </span>
@@ -107,13 +107,13 @@ function Dashboard({ theme }: { theme: ThemeClassSet }) {
             spotlightColor={spotlight.EXPERIENCE}
           >
             <h2
-              className="text-lg font-semibold tracking-tight mb-2 text-white/80
+              className="lg:text-lg text-base font-semibold tracking-tight mb-2 text-white/80
                     group-hover:text-sky-500/90
           "
             >
               My Journey in tech
             </h2>
-            <span className="text-sm text-slate-300 max-w-lg">
+            <span className="lg:text-sm text-xs text-slate-300 max-w-lg">
               From curiosity to craft and one step, one lesson, one breakthrough
               at a time. Check out my experience in the world of tech
             </span>
@@ -137,13 +137,13 @@ function Dashboard({ theme }: { theme: ThemeClassSet }) {
           >
             <div>
               <h2
-                className="text-lg font-semibold tracking-tight mb-2 text-white/80
+                className="lg:text-lg text-base font-semibold tracking-tight mb-2 text-white/80
                     group-hover:text-cyan-500/90
           "
               >
                 Tools, Tech & Things I Build
               </h2>
-              <p className="text-sm  mt-4 text-slate-300">
+              <p className="lg:text-sm text-xs  mt-4 text-slate-300">
                 Where ideas meet implementation, and curiosity turns into craft,
                 shaping thoughtful, performant, and human-centered digital
                 experiences, powered by the tools and technologies I love.
@@ -168,13 +168,13 @@ function Dashboard({ theme }: { theme: ThemeClassSet }) {
             spotlightColor={spotlight.INSPIRATIONS}
           >
             <h2
-              className="text-lg font-semibold tracking-tight mb-2 text-white/80
+              className="lg:text-lg text-base font-semibold tracking-tight mb-2 text-white/80
                     group-hover:text-green-500/90
           "
             >
               People I look up to
             </h2>
-            <span className="text-sm text-slate-300 max-w-lg">
+            <span className="lg:text-sm text-xs text-slate-300 max-w-lg">
               The minds and mentalities that forged my discipline, resilience,
               ambition, and uncompromising standards for growth.
             </span>
@@ -198,13 +198,13 @@ function Dashboard({ theme }: { theme: ThemeClassSet }) {
           >
             <div>
               <h2
-                className="text-lg font-semibold tracking-tight mb-2 text-white/80
+                className="lg:text-lg text-base font-semibold tracking-tight mb-2 text-white/80
                     group-hover:text-white-500/90
           "
               >
                 Achievements & Milestones
               </h2>
-              <p className="text-sm  mt-4 text-slate-300">
+              <p className="lg:text-sm text-xs  mt-4 text-slate-300">
                 Moments of recognition that mark my growth, discipline, and
                 pursuit of excellence.
               </p>

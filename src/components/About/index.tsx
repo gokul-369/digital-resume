@@ -56,7 +56,7 @@ function About({ theme }: { theme: ThemeClassSet }) {
           className={`grid grid-cols-2 lg:grid-cols-3 h-full lg:gap-96 justify-between items-center mt-10 gap-8`}
         >
           <ProfileCard
-            className="h-full mx-auto col-span-2 lg:col-span-1 lg:mx-0 text-center lg:w-[350px] px-5 lg:px-0 w-full"
+            className="h-full mx-auto col-span-2 lg:col-span-1 lg:mx-0 text-center lg:w-[330px] px-5 lg:px-0 w-full"
             name="Gokul"
             title="Software Engineer"
             handle="gokul369"
@@ -72,7 +72,7 @@ function About({ theme }: { theme: ThemeClassSet }) {
             innerGradient="linear-gradient(145deg, rgba(56,189,248,0.15) 0%, rgba(99,102,241,0.22) 40%, rgba(251,191,36,0.18) 100%)"
           />
           <div
-            className={`${theme.textPrimary} flex h-full flex-col justify-start  col-span-2 py-8  lg:text-lg text-md  text-md px-8 lg:px-0`}
+            className={`${theme.textPrimary} flex h-full flex-col justify-start  col-span-2 py-8  lg:text-lg text-sm  text-md px-8 lg:px-0`}
           >
             <div
               ref={menuRef}
@@ -122,7 +122,7 @@ function About({ theme }: { theme: ThemeClassSet }) {
                 <div className="h-8 mb-8 flex items-center">
                   {startTyping && (
                     <h1
-                      className={`${theme.textPrimary} text-xl lg:text-2xl font-thin tracking-widest`}
+                      className={`${theme.textPrimary} text-lg lg:text-2xl font-thin lg:tracking-widest tracking-wide`}
                     >
                       I am also{" "}
                       <TextType

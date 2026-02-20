@@ -41,32 +41,20 @@ function Hero({ theme, colors }: HeroProps) {
               dangerouslySetInnerHTML={{ __html: hero.title }}
             />
           </BlurText>
-          <Fade
-            // start={ready}
-            variant="fade-up"
-            delay={300}
-            className={"mt-3 text-center"}
-          >
+          <Fade variant="fade-up" delay={300} className={"mt-3 text-center"}>
             <h3
-              className={`${theme.headerGradient} bg-clip-text text-3xl lg:text-6xl font-extrabold lg:font-bold text-transparent`}
+              className={`${theme.headerGradient} bg-clip-text text-4xl lg:text-6xl font-extrabold lg:font-bold text-transparent`}
             >
               {hero.punchLine}
             </h3>
 
-            <h4 className={`mt-4 lg:text-lg text-md ${theme.textSecondary}`}>
+            <h4 className={`mt-4 lg:text-lg text-xs ${theme.textSecondary}`}>
               {hero.shortDescription}
             </h4>
           </Fade>
-          <Fade
-            // start={ready}
-            variant="fade-up"
-            delay={500}
-            mt-5
-            text-center
-            className={"text-center"}
-          >
+          <Fade variant="fade-up" delay={500} className={"text-center"}>
             <div
-              className={`${theme.textSecondary} max-w-2xl mx-auto leading-relaxed`}
+              className={`${theme.textSecondary} max-w-2xl lg:text-base text-xs mx-auto leading-relaxed`}
               dangerouslySetInnerHTML={{ __html: hero.longDescription }}
             />
             <div className="inline-flex gap-5 items-center justify-center mt-10">
@@ -76,9 +64,11 @@ function Hero({ theme, colors }: HeroProps) {
           </Fade>
         </main>
 
-        <ChevronDownIcon
-          className={`absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce ${theme.textPrimary}`}
-        />
+        <a href="/#about">
+          <ChevronDownIcon
+            className={`absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce ${theme.textPrimary}`}
+          />
+        </a>
       </div>
     </section>
   );

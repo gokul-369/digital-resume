@@ -22,7 +22,7 @@ function CertificateCard({
             <Icon className="bottom-0 right-0 absolute text-green-500/25 h-20 w-20" />
           }
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-400">
+            <p className="lg:text-[12px] text-[10px] font-semibold uppercase tracking-[0.25em] text-slate-400">
               {type}
             </p>
             <h3 className="mt-1 text-sm font-medium text-slate-50 md:text-base">
